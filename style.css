@@ -203,7 +203,7 @@ footer {
   .buttons {  
     flex-direction: column;
     gap: 10px;
-    padding-top: 60px;
+    padding-top: 40px;
     width: 250px;
     margin-left:20px; 
   
@@ -214,7 +214,11 @@ footer {
 }
 
 .results{
-  margin-top: 35px;
+  margin-top: 50px;
+  background-color:rgb(83, 6, 99);
+  color:whitesmoke;
+  border-style:inset;
+  border-radius:inherit;
 }
 
 
