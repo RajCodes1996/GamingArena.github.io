@@ -98,8 +98,8 @@ h1 {
   background: var(--button);
   border: none;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   font-size: 28px;
   color: white;
   cursor: pointer;
@@ -160,14 +160,25 @@ footer {
 
 /* ✅ Mobile Responsive */
 @media (max-width: 600px) {
-  html, body {
+   html, body {
     overflow: hidden;
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed; /* prevent scroll */
+    touch-action: none; /* disable scrolling gestures */
+  }
+   .game-container {
+    position: absolute;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    height:90vh;
   }
 
-  .game-container {
-    height: 90vh;
-    padding: 20px;
+   * {
+    box-sizing: border-box;
   }
 
   h1 {
@@ -181,11 +192,22 @@ footer {
     font-size: 24px;
   }
 
-  .buttons {
+  .choices{
+     padding-top: 28px;
+  }
+
+  .buttons {  
     flex-direction: column;
     gap: 10px;
-    padding-top: 20px;
+    padding-top: 70px;
+    width: 250px;
+    margin-left:25px; 
+  
   }
+
+#userScore,#computerScore{
+  margin-left: 20px;
+}
 
   footer {
     display: none;
