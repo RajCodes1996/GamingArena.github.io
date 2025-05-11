@@ -158,6 +158,10 @@ footer {
   backdrop-filter: blur(4px);
 }
 
+#userScore,#computerScore{
+  margin-left: 20px;
+}
+
 /* ✅ Mobile Responsive */
 @media (max-width: 600px) {
    html, body {
