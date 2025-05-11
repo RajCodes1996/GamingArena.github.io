@@ -57,9 +57,12 @@ body.dark-mode {
     width: 90%;
     margin: auto;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 20px;
     background-color: white;
+    backdrop-filter: blur(10px);
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
