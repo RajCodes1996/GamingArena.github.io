@@ -97,17 +97,21 @@ h1 {
 
 .scoreboard {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px; /* 🆕 Adds space between "You" and "Computer" */
   margin-bottom: 40px;
 }
 
 .score h2 {
   margin: 0;
+  font-size: 20px;
+  text-align: center;
 }
 
 .score p {
   font-size: 24px;
   margin: 5px 0;
+  text-align: center;
 }
 
 .choices {
