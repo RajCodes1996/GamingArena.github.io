@@ -24,7 +24,6 @@ html, body {
   justify-content: center;
   align-items: center;
   transition: background 0.4s ease;
-  touch-action: none; /* disable scrolling gestures */
   overflow:hidden;
 }
 
