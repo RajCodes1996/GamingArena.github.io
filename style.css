@@ -239,8 +239,7 @@ body.dark-mode .results {
     gap: 10px;
     padding-top: 10px;
     width: 250px;
-    margin-left:30px; 
-  
+    margin-left:25px; 
   }
 
 #userScore,#computerScore{
