@@ -226,6 +226,9 @@ body.dark-mode .results {
   .game-container {
     max-width: 600px;
     padding: 30px;
+    position: fixed;
+    touch-action: none;
+    overflow: hidden;
   }
 }
 
