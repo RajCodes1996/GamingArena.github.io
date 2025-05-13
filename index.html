@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stone Paper Scissors</title>
+  <title>Stone Paper Scissors - Modern</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="background"></div>
 
-  <div class="game-container">
-    <center><h1>Stone ✊ Paper ✋ Scissors✌</h1></center>
+  <main class="game-container" role="main">
+    <header>
+      <h1>✊ Stone ✋ Paper ✌ Scissors</h1>
+    </header>
 
-    <div class="scoreboard">
+    <section class="scoreboard" aria-label="Scoreboard">
       <div class="score">
         <h2>You</h2>
         <p id="userScore">0</p>
@@ -22,27 +24,31 @@
         <h2>Computer</h2>
         <p id="computerScore">0</p>
       </div>
-    </div>
+    </section>
 
-    <div class="choices">
-      <button class="choice" onclick="playGame('rock')"><i class="fas fa-hand-rock"></i></button>
-      <button class="choice" onclick="playGame('paper')"><i class="fas fa-hand-paper"></i></button>
-      <button class="choice" onclick="playGame('scissors')"><i class="fas fa-hand-scissors"></i></button>
-    </div>
-
-    <div class="results">
+    <section class="results" aria-label="Game Result">
       <p id="userChoice">You chose: </p>
       <p id="computerChoice">Computer chose:</p>
       <h3 id="winner">Result: </h3>
-    </div>
+    </section>
 
-    <div class="buttons">
-      <button onclick="resetGame()" class="control-btn">🔄 Reset</button>
-      <button onclick="toggleDarkMode()" class="control-btn">🌙 Dark Mode</button>
+
+    <section class="choices" aria-label="Your Choices">
+      <button class="choice" onclick="playGame('rock')" aria-label="Choose Rock"><i class="fas fa-hand-rock"></i></button>
+      <button class="choice" onclick="playGame('paper')" aria-label="Choose Paper"><i class="fas fa-hand-paper"></i></button>
+      <button class="choice" onclick="playGame('scissors')" aria-label="Choose Scissors"><i class="fas fa-hand-scissors"></i></button>
+    </section>
+
+    
+    <section class="buttons">
+      <button onclick="resetGame()" class="control-btn" aria-label="Reset Game">🔄 Reset</button>
+      <button onclick="toggleDarkMode()" class="control-btn" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+    </section>
+
+    <div class="developer-credit">
+      <i>Developed by <strong>@Rajarshi~Yadav</strong></i>
     </div>
-    <br>
-    <center><div><i> Developed by @Rajarshi~Yadav</i></div></center>
-  </div>
+  </main>
 
   <footer>
     &copy; 2025 | Developed by <strong>@Rajarshi~Yadav</strong>
