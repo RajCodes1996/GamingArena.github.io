@@ -26,8 +26,6 @@ html, body {
   transition: background 0.4s ease;
   padding: 0 1rem;
   overflow-x: hidden;
-  position: fixed;
-  touch-action: none;
 }
 
 /* Dark Mode */
@@ -230,7 +228,6 @@ body.dark-mode .results {
     padding: 30px;
     position: fixed;
     touch-action: none;
-    overflow: hidden;
   }
 }
 
