@@ -2,6 +2,8 @@ let userScore = 0;
 let computerScore = 0;
 
 function playGame(userChoice) {
+  disableChoices(true);
+
   const choices = ['rock', 'paper', 'scissors'];
   const computerChoice = choices[Math.floor(Math.random() * 3)];
 
@@ -9,20 +11,30 @@ function playGame(userChoice) {
   document.getElementById('computerChoice').textContent = `Computer chose: ${capitalize(computerChoice)}`;
 
   const result = getResult(userChoice, computerChoice);
-  document.getElementById('winner').textContent = `Result: ${result}`;
+  const winnerText = document.getElementById('winner');
+
+  winnerText.classList.remove('win', 'lose', 'draw');
 
   if (result === 'You Win!') {
     userScore++;
+    winnerText.textContent = `Result: ✅ ${result} 🎉`;
+    winnerText.classList.add('win');
     document.getElementById('winSound').play();
   } else if (result === 'You Lose!') {
     computerScore++;
+    winnerText.textContent = `Result: ❌ ${result} 😞`;
+    winnerText.classList.add('lose');
     document.getElementById('loseSound').play();
   } else {
+    winnerText.textContent = `Result: 🤝 ${result} 😐`;
+    winnerText.classList.add('draw');
     document.getElementById('drawSound').play();
   }
 
   document.getElementById('userScore').textContent = userScore;
   document.getElementById('computerScore').textContent = computerScore;
+
+  setTimeout(() => disableChoices(false), 1000); // Re-enable after 1 second
 }
 
 function getResult(user, computer) {
@@ -47,8 +59,21 @@ function resetGame() {
   document.getElementById('userChoice').textContent = "You chose: ";
   document.getElementById('computerChoice').textContent = "Computer chose: ";
   document.getElementById('winner').textContent = "Result: ";
+  document.getElementById('winner').classList.remove('win', 'lose', 'draw');
 }
 
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
+  const darkModeBtn = document.getElementById('darkModeBtn');
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeBtn.textContent = "☀️ Light Mode";
+  } else {
+    darkModeBtn.textContent = "🌙 Dark Mode";
+  }
+}
+
+function disableChoices(disabled) {
+  document.querySelectorAll('.choice').forEach(btn => {
+    btn.disabled = disabled;
+  });
 }
